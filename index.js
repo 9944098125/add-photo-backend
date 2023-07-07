@@ -20,6 +20,7 @@ app.use(cors());
 // body parser's url encoded is passed true so that it accepts nested objects too in the request body.
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// you can even user multer package to upload a picture from backend itself, if you don't like to do it from frontend.
 app.post("/api/post-users", (req, res) => {
   const { name, email, photo } = req.body;
   // this sql query is for mysql2, it may be different for postgres, sqlite and others
